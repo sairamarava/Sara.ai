@@ -514,9 +514,9 @@
 
     <script>
       class SaraAI {
-        constructor() {
-          this.apiKey ="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";
-          this.apiUrl ="https://openrouter.ai/api/v1/chat/completions";
+        constructor(apiKey) {
+          this.apiKey = apiKey;
+          this.apiUrl = "https://openrouter.ai/api/v1/chat/completions";
           this.conversationHistory = [];
         }
 
@@ -559,7 +559,9 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         // Initialize Sara.ai with API key
-        const sara = new SaraAI();
+        const sara = new SaraAI(
+          "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"
+        );
 
         // DOM Elements
         const chatDisplay = document.getElementById("chatDisplay");
